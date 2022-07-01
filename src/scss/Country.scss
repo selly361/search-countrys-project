@@ -1,0 +1,98 @@
+
+ 
+    $dark-mode-elements: #2b3945;
+    $dark-mode-bg: #202c37;
+    $light-mode-elements: #fff;
+    $light-mode-bg: #fafafa;
+
+    
+
+
+
+.Body {
+    width: 100vw;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.wrapper {
+    margin: auto;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row;
+
+}
+
+.flag {
+    height: 30vh;
+}
+
+button {
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
+    font-size: 1.5rem;
+    background-color: white;
+    padding: .3rem 2rem;
+    border: 1px solid black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-position: left;
+
+    &:hover { 
+        filter: brightness(0.9);
+    }
+}
+
+.info {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.Darkmode-body {
+    background-color: $dark-mode-bg;
+    color: white;
+
+    button {
+        background-color: #2b3945;
+        color: white;
+    }
+}
+
+
+
+@media screen and (min-width: 290px) and (max-width: 1280px) {
+    .flag {
+        height: 25vh;
+    }
+    .wrapper {
+        flex-flow: column;
+    }
+
+    .Body {
+        height: 130vh;
+    }
+}
+
+
+@media screen and (min-width: 640px)  and (max-width: 1024px) {
+
+    .wrapper {
+        gap: 5rem;
+    }
+
+    .info {
+        grid-template-columns: repeat(2, 1fr)
+
+    }
+
+    img {
+        height: 150px;
+    }
+}
